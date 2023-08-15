@@ -53,7 +53,7 @@
   "featureToggles": {},
   "name": "video-streaming-livekit",
   "worldConfiguration": {
-    "name": "hugoarregui.dcl.eth",
+    "name": "your-dcl-name.dcl.eth",
     "placesConfig": {
       "optOut": true
     }
