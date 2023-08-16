@@ -3,15 +3,10 @@ import ReactEcs, { ReactEcsRenderer, UiEntity, Label, Dropdown } from '@dcl/sdk/
 import { Color4 } from '@dcl/sdk/math'
 import { VideoPlayer, engine } from '@dcl/sdk/ecs'
 import { ScreenComponent } from './factory'
+import { VideoTrackSourceType, formatAddress, getSourceType } from './utils'
 
 let streams: VideoTracksActiveStreamsData[] = []
 
-enum VideoTrackSourceType {
-  VTST_UNKNOWN = 0,
-  VTST_CAMERA = 1,
-  VTST_SCREEN_SHARE = 2,
-  UNRECOGNIZED = -1
-}
 
 export function updateTracks(tracks: VideoTracksActiveStreamsData[]) {
   streams = [
@@ -70,20 +65,6 @@ const uiComponent = () => {
   )
 }
 
-function formatAddress(address: string) {
-  if (!address.startsWith('0x')) return address
-  const prefix = address.slice(0, 5);
-  const body = address.slice(-4);
-  const formattedAddress = `${prefix}...${body}`;
-  return formattedAddress
-}
-
-const getSourceType = {
-  [VideoTrackSourceType.VTST_CAMERA]: 'Camera',
-  [VideoTrackSourceType.VTST_SCREEN_SHARE]: 'Screen sharing',
-  [VideoTrackSourceType.UNRECOGNIZED]: 'Unrecognized',
-  [VideoTrackSourceType.VTST_UNKNOWN]: 'Unknown',
-}
 
 export function setupUi() {
   ReactEcsRenderer.setUiRenderer(uiComponent)
