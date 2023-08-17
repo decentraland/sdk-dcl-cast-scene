@@ -1,5 +1,5 @@
 import { Entity, engine, Transform, MeshRenderer, MeshCollider, GltfContainer, TransformType, ColliderLayer, Material, VideoPlayer } from '@dcl/sdk/ecs'
-import { Quaternion } from '@dcl/sdk/math'
+import { Color3, Quaternion } from '@dcl/sdk/math'
 
 // Cube factory
 export function createGLTF(transform: Partial<TransformType>, src: string): Entity {
@@ -43,6 +43,9 @@ export function screen(transform: Partial<TransformType>) {
     texture: videoTexture,
     emissiveTexture: videoTexture,
     emissiveIntensity: 0.6,
-    roughness: 1.0
+    roughness: 1.0,
+    specularIntensity: 0,
+    metallic: 0,
+    emissiveColor: Color3.White(),
   })
 }
