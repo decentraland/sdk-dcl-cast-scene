@@ -6,21 +6,15 @@ A scene with examples of some simple interactions. Perform the corresponding act
 
 This scene shows you:
 
-- How to stream video into a scene
-- How to reuse the same video texture in multiple screens
+- How to stream video into a scene from Decentraland Cast
 - How to play/pause a video stream
+
+Learn more about [Decentraland Cast](https://docs.decentraland.org/creator/worlds/cast/).
+
+Learn more about streaming videos into a scene [here](https://docs.decentraland.org/creator/development-guide/sdk7/video-playing/).
 
 ## Try it out
 
-**Install the CLI**
-
-Download and install the Decentraland CLI by running the following command:
-
-```bash
-npm i -g decentraland
-```
-
-**Previewing the scene**
 
 1. Download this full repository from [sdk7-goerli-plaza](https://github.com/decentraland/sdk7-goerli-plaza/tree/main), including this and several other example scenes on SDK7.
 
@@ -38,7 +32,11 @@ npm run start
 
 **Scene Usage**
 
-Click on the screen to pause/play it.
+- Publish this scene to a Decentraland [World](https://docs.decentraland.org/creator/worlds/about/)
+- Enter [Decentraland Cast](https://cast.decentraland.org/) to start streaming.
+- Run the scene by entiering your world. The live stream should be visible inside the stream for you and any other players there.
+
+If there are any active streams on Decentraland Cast, you can select them from the Dropdown menu in the UI.
 
 Learn more about how to build your own scenes in our [documentation](https://docs.decentraland.org/) site.
 
